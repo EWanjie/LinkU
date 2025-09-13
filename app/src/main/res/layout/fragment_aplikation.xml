@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Aplikation"
+    android:background="@color/gray">
+
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/zoomPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+        <ImageButton
+            android:id="@+id/btnZoomIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_button"
+            android:src="@drawable/plus"
+            app:tint="@color/gray4" />
+
+        <ImageButton
+            android:id="@+id/btnZoomOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/circle_button"
+            android:src="@drawable/minus"
+            app:tint="@color/gray4"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/locationPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        >
+
+        <ImageButton
+            android:id="@+id/dellRotation"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_button"
+            android:src="@drawable/compas"
+            android:layout_gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/locationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_button"
+            android:src="@drawable/position"
+            app:tint="@color/gray4"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
+            />
+    </LinearLayout>
+
+</FrameLayout>

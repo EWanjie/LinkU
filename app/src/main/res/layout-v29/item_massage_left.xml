@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
+        app:cardUseCompatPadding="false"
+        app:cardPreventCornerOverlap="true"
+        app:cardBackgroundColor="@color/gray2"
+        app:shapeAppearanceOverlay="@style/Shape.Bubble.In"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/all_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/lift_image"
+                android:layout_width="@dimen/max_width"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/bb"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/Shape.Bubble.In"
+                app:strokeWidth="0dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/left_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:autoLink="web|email|phone"
+
+                android:maxWidth="@dimen/max_width"
+                android:includeFontPadding="false"
+                android:textLocale="ru"
+                
+                
+                android:text="Маша, кстати, по этому поводу стих вспомнила"
+                android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/left_meta_right_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/left_text"
+                app:layout_constraintStart_toEndOf="@+id/left_text"
+                android:text="15:30"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/left_meta_down_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/left_text"
+                app:layout_constraintEnd_toEndOf="@+id/left_text"
+                android:text="15:30"
+                android:textSize="12dp"
+                android:paddingTop="2dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
