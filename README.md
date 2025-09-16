@@ -4,3 +4,4 @@
 - GraphHopper — построение маршрутов
 
 Приложение написано в стиле vibe coding.
+Установочный файл и пример демонстрации программы: https://drive.google.com/drive/folders/1h6XeV7R7gKReqDxuMzE3xRCFJgiVSCTw?usp=sharing
